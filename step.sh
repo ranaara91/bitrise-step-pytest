@@ -54,6 +54,11 @@ if [ "${appium_enabled}" == "true" ] ; then
     # install and start appium
     npm install -g appium
 
+    # Navigate to appium directory where webdriver agent is located
+    cd /usr/local/lib/node_modules/appium/node_modules/appium-webdriveragent/
+    # Run the bootstrap script
+    bash Scripts/bootstrap.sh -d
+
     echo "Starting Appium port: ${APPIUM_PORT}, log: ${APPIUM_LOG_PATH}"
     appium --port ${APPIUM_PORT} --log ${APPIUM_LOG_PATH} --log-level debug &
     APPIUM_PID=$!
