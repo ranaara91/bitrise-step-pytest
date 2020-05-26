@@ -49,6 +49,7 @@ if [ "${appium_enabled}" == "true" ] ; then
 
     # fixes: npm ERR! Cannot read property 'find' of undefined
     npm cache verify
+    brew upgrade carthage
 
     # install and start appium
     npm install -g appium
