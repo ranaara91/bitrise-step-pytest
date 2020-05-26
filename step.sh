@@ -51,7 +51,7 @@ if [ "${appium_enabled}" == "true" ] ; then
     npm cache verify
 
     # install and start appium
-    npm install -g appium@1.6.5
+    npm install -g appium
 
     echo "Starting Appium port: ${APPIUM_PORT}, log: ${APPIUM_LOG_PATH}"
     appium --port ${APPIUM_PORT} --log ${APPIUM_LOG_PATH} --log-level debug &
