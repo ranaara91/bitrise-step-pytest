@@ -9,8 +9,6 @@ fi
 
 PYTEST_OPT=""
 
-PYTEST_OPT+=" --ignore=bin --ignore=lib --ignore=include --ignore=selenium"
-
 if [ -n "${junit_file_path}" ] ; then
     PYTEST_OPT+=" --junit-xml=${junit_file_path}"
     envman add --key PYTEST_JUNIT_PATH --value ${junit_file_path}
